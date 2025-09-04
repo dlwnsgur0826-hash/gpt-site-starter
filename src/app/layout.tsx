@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -14,10 +15,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <header className="mb-8">
             <h1 className="text-2xl font-bold">무자본 위키</h1>
             <nav className="mt-4 flex gap-4 text-sm">
-              <a href="/" className="hover:opacity-80">홈</a>
-              <a href="/blog" className="hover:opacity-80">블로그</a>
-              <a href="/store" className="hover:opacity-80">스토어</a>
-            </nav>
+  <Link href="/" className="hover:opacity-80">홈</Link>
+  <Link href="/blog" className="hover:opacity-80">블로그</Link>
+  <Link href="/store" className="hover:opacity-80">스토어</Link>
+</nav>
           </header>
           <main>{children}</main>
           <footer className="mt-16 border-t border-black/10 dark:border-white/10 pt-8 text-xs opacity-70">
